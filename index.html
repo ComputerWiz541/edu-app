@@ -2,20 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Education App</h1>
-        <p>Learn something new every day!</p>
-        <div class="buttons">
-            <button onclick="location.href='#';">Math</button>
-            <button onclick="location.href='#';">Science</button>
-            <button onclick="location.href='#';">History</button>
-            <button onclick="toggleTheme();">Toggle Theme</button>
+    <div id="app">
+        <div id="main-screen" class="screen">
+            <h1>Welcome to Education App</h1>
+            <p>Learn something new every day!</p>
+            <div class="button-container">
+                <button id="math-button">Math</button>
+                <button id="science-button">Science</button>
+                <button id="history-button">History</button>
+                <button id="theme-button">Toggle Theme</button>
+            </div>
+        </div>
+        <div id="math-screen" class="screen" style="display: none;">
+            <button id="back-button">Back</button>
+            <h2 id="math-question"></h2>
+            <input type="text" id="answer-input" placeholder="Enter your answer">
+            <button id="check-button">Check Answer</button>
+            <p id="result"></p>
         </div>
     </div>
     <script src="script.js"></script>

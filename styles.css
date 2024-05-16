@@ -2,45 +2,87 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #333;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
 }
 
-.container {
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+#app {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.dark-theme #app {
+    background-color: #444;
+    color: #fff;
+}
+
+.screen {
     text-align: center;
 }
 
-h1 {
-    font-size: 30px;
+h1, h2 {
+    color: #333;
+    transition: color 0.3s ease;
 }
 
-p {
-    font-size: 20px;
-}
-
-.buttons {
-    margin-top: 20px;
+.dark-theme h1, .dark-theme h2 {
+    color: #fff;
 }
 
 button {
     padding: 10px 20px;
-    margin: 0 5px;
+    margin: 5px;
     font-size: 16px;
     cursor: pointer;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+#math-button {
+    background-color: #007bff;
+    color: #fff;
 }
-/* Dark Theme */
-body.dark-theme {
-    background-color: #222;
+
+#science-button {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#history-button {
+    background-color: #ffc107;
+    color: #333;
+}
+
+#theme-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#answer-input {
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-theme #answer-input {
+    background-color: #555;
+    color: #fff;
+}
+
+#result {
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.dark-theme #result {
     color: #fff;
 }
